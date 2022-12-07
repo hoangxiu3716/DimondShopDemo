@@ -1,0 +1,184 @@
+CREATE TABLE sach
+(
+  id              VARCHAR(50) NOT NULL,
+  tenSach         VARCHAR(512) NOT NULL, 
+  giaBan          DOUBLE NOT NULL,
+  namXuatBan      INT,
+  PRIMARY KEY     (id)
+);
+CREATE TABLE khachHang
+(
+  id              INT unsigned NOT NULL AUTO_INCREMENT,
+  hoVaTen         VARCHAR(255),
+  ngaySinh        DATE NOT NULL,
+  diaChi          VARCHAR(512),
+  PRIMARY KEY     (id)
+);
+
+
+CREATE TABLE slides
+(
+  id              INT unsigned NOT NULL AUTO_INCREMENT,
+  img             VARCHAR(255),
+  caption         VARCHAR(255),
+  content         VARCHAR(255),
+  PRIMARY KEY     (id)
+);
+
+
+CREATE TABLE categories
+(
+  id              INT unsigned NOT NULL AUTO_INCREMENT,
+  name            VARCHAR(255),
+  description     TEXT,
+  PRIMARY KEY     (id)
+);
+
+
+CREATE TABLE `product` (
+	`id` BIGINT(20) NOT NULL AUTO_INCREMENT,
+	`category_id` INT(11) NOT NULL,
+	`size` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci',
+	`name` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci',
+	`price` DOUBLE NOT NULL,
+	`sale` INT(3) NOT NULL,
+	`title` VARCHAR(255) NOT NULL COLLATE 'utf8_general_ci',
+	`highlight` BOOLEAN NOT NULL DEFAULT 0,
+	`new_product` BOOLEAN NOT NULL DEFAULT 0,
+	`detail` LONGTEXT NOT NULL COLLATE 'utf8_general_ci',
+	`created_at` DATETIME NOT NULL,
+	`updated_at` DATETIME NOT NULL,
+	PRIMARY KEY (`id`) USING BTREE,
+	INDEX `categoryId` (`category_id`) USING BTREE,
+	CONSTRAINT `categoryId` FOREIGN KEY (`category_id`) REFERENCES `diamond_shop`.`categories` (`id`) ON UPDATE CASCADE ON DELETE RESTRICT
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
+
+
+CREATE TABLE menu
+(
+  id              INT unsigned NOT NULL AUTO_INCREMENT,
+  name            VARCHAR(255) NOT NULL,
+  url             VARCHAR(255),
+  PRIMARY KEY     (id)
+);
+
+
+CREATE TABLE `product` (
+	`id` BIGINT(20) NOT NULL AUTO_INCREMENT,
+	`category_id` INT(11) NOT NULL,
+	`size` VARCHAR(255) NOT NULL,
+	`name` VARCHAR(255) NOT NULL,
+	`price` DOUBLE NOT NULL,
+	`sale` INT(3) NOT NULL,
+	`title` VARCHAR(255) NOT NULL,
+	`highlight` BOOLEAN NOT NULL DEFAULT 0,
+	`new_product` BOOLEAN NOT NULL DEFAULT 0,
+	`detail` LONGTEXT NOT NULL,
+	`created_at` DATETIME NOT NULL,
+	`updated_at` DATETIME NOT NULL,
+	PRIMARY KEY (`id`) USING BTREE,
+	INDEX `categoryId` (`category_id`) USING BTREE,
+	CONSTRAINT `categoryId` FOREIGN KEY (`category_id`) REFERENCES `diamond_shop`.`categories` (`id`) ON UPDATE RESTRICT ON DELETE RESTRICT
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
+
+
+CREATE TABLE `colors` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`product_id` BIGINT NOT NULL,
+	`name` VARCHAR(255) NOT NULL,
+	`code` VARCHAR(255) NOT NULL,
+	PRIMARY KEY (`id`),
+	CONSTRAINT `productId` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`)
+)
+COLLATE='utf8_general_ci'
+;
+
+
+
+INSERT INTO khachHang(hoVaTen, ngaySinh, diaChi)
+VALUES ("Dao Duy Hoang", "1999-09-09", "Nguyen Ngoc Vu"), 
+("Tran Thi Thanh Tam", "1999-07-28", "Nguyen Ngoc Vu");
+
+
+INSERT INTO slides(img, caption, content)
+VALUES ("bootstrap-templates.png", "Test slides 2", "content2"),
+       ("bootstrap_free-ecommerce.png", "Test slides 3", "content3"),
+       ("carousel1.png", "Test slides 4", "content4");
+
+
+INSERT INTO Persons (last_name, first_name, gender, dob, income)
+VALUES ("Dao", "Duy Hoang", "M", "1999-09-09", 9000000),
+("Tran Thi", "Thanh Tam", "F", "2000-07-28", 7000000);
+
+
+INSERT INTO `product` (`category_id`, `size`, `name`, `price`, `sale`, `title`, `highlight`, `new_product`, `detail`, `created_at`, `updated_at`) VALUES
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43'),
+(1, 'L,S,M', 'Name', '200000', 0, 'tital', 1, 0, 'details', '2020-04-09 11:38:43', '2020-04-09 11:38:43');
+
+INSERT INTO `colors` (`product_id`, `name`, `code`, `img`) VALUES
+(1, 'Vàng', '#FFFF00', 'a.jpg'),
+(1, 'Xanh', '#FFFF00', 'b.jpg'),
+(2, 'Vàng', '#FFFF00', 'c.jpg'),
+(2, 'Xanh', '#FFFF00', 'd.jpg'),
+(5, 'Vàng', '#FFFF00', 'e.jpg'),
+(6, 'Vàng', '#FFFF00', 'g.jpg'),
+(7, 'Vàng', '#FFFF00', 'h.jpg'),
+(8, 'Vàng', '#FFFF00', 'i.jpg'),
+(9, 'Vàng', '#FFFF00', 'b.jpg'),
+(10, 'Vàng', '#FFFF00', 'b.jpg'),
+(11, 'Vàng', '#FFFF00', 'b.jpg'),
+(12, 'Vàng', '#FFFF00', 'b.jpg'),
+(13, 'Vàng', '#FFFF00', 'b.jpg'),
+(14, 'Vàng', '#FFFF00', 'b.jpg'),
+(15, 'Vàng', '#FFFF00', 'b.jpg'),
+(16, 'Vàng', '#FFFF00', 'b.jpg'),
+(17, 'Vàng', '#FFFF00', 'b.jpg'),
+(18, 'Vàng', '#FFFF00', 'b.jpg'),
+(19, 'Vàng', '#FFFF00', 'b.jpg'),
+(20, 'Vàng', '#FFFF00', 'b.jpg'),
+(21, 'Vàng', '#FFFF00', 'b.jpg'),
+(22, 'Vàng', '#FFFF00', 'b.jpg'),
+(23, 'Vàng', '#FFFF00', 'b.jpg'),
+(24, 'Vàng', '#FFFF00', 'b.jpg'),
+(25, 'Vàng', '#FFFF00', 'b.jpg');
+
+
+
+INSERT INTO `menu` (`name`) VALUES
+('Sản phẩm'),
+('So sánh'),
+('Giỏ hàng'),
+('Bài viết'),
+('Liên hệ');
