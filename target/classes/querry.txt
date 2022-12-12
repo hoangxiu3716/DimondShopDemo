@@ -20,3 +20,5 @@ product AS p
 INNER JOIN
 colors AS c
 ON p.id = c.product_id
+GROUP BY p.id, c.product_id
+ORDER BY RAND()
