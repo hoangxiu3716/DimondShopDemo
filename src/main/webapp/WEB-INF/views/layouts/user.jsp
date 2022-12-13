@@ -18,6 +18,7 @@
 <!-- font awesome styles -->
 <link href="<c:url value="/assets/user/font-awesome/css/font-awesome.css"/>" rel="stylesheet" />
 <link rel="shortcut icon" href="<c:url value="/assets/user/ico/favicon.ico"/>">
+<decorator:head/>
 </head>
 <body>
 	<!-- 

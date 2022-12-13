@@ -26,14 +26,14 @@
 	<!-- 
 Body Section 
 -->
-	<title>Home page</title>
+	<title>Trang chủ</title>
 	<%-- <h1>${ categories.size() }</h1> --%>
 	<div class="row">
 		<div id="sidebar" class="span3">
 			<div class="well well-small">
 				<ul class="nav nav-list">
 					<c:forEach var="item" items="${ categories }">
-						<li><a href="/san-pham/${ item.id }"><span
+						<li><a href='<c:url value="/san-pham/${ item.id }"/>'><span
 								class="icon-circle-blank"></span> ${ item.name }</a></li>
 					</c:forEach>
 					<li><a class="totalInCart" href="cart.html"><strong>Đã
