@@ -18,4 +18,5 @@ public class BaseController {
 		_mvShare.addObject("menu", _homeService.GetDataMenu());
 		return _mvShare;
 	}
+	//test 123
 }
