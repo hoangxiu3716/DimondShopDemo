@@ -241,7 +241,9 @@ New Products
 											</span>
 										</h4>
 									</div>
-								</div> <c:if
+								</div>
+								</li>
+								<c:if
 									test="${ (loop.index + 1) % 3 == 0 || (loop.index + 1) == highLightProduct.size() }">
 					</ul>
 					<c:if test="${ (loop.index + 1) < highLightProduct.size() }">

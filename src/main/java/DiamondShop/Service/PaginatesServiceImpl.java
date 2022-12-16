@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import DiamondShop.Dto.PaginatesDto;
 
 @Service
-public class PaginatesServiceImpl {
+public class PaginatesServiceImpl implements IPaginatesService{
 	public PaginatesDto GetInfoPaginates(int totalData, int limit, int currentPage) {
 		PaginatesDto paginatesDto = new PaginatesDto();
 		paginatesDto.setLimit(limit);
@@ -30,7 +30,7 @@ public class PaginatesServiceImpl {
 	private int SetInfoTotalPage(Integer totalData, Integer limit) {
 		Integer totalPage = 0;
 		totalPage = totalData / limit;
-		totalData = totalPage * limit < totalData ? totalPage + 1 :totalPage;
+		totalPage = totalPage * limit < totalData ? totalPage + 1 : totalPage;
 		return totalPage;
 	}
 	public int CheckCurrentPage(int currentPage, int totalPage) {

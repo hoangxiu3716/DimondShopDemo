@@ -1,5 +1,6 @@
 package DiamondShop.Dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
@@ -59,6 +60,18 @@ public class ProductDao extends BaseDao{
 		}
 		return sql.toString();
 	}
+	private StringBuffer SqlProductById(int id) {
+		StringBuffer  sql = SqlString();
+		sql.append("WHERE 1 = 1 ");
+		sql.append("AND category_id = "+id+" ");
+		return sql;
+	}
+	
+	private String SqlProductPaginate(int id, int start, int totalPage) {
+		StringBuffer  sql = SqlProductById(id);
+		sql.append("LIMIT " + start + ", " +totalPage);
+		return sql.toString();
+	}
 	
 	public List<ProductDto> GetDataHighLightProduct() {
 		String sql = SqlProduct(NO, YES);
@@ -69,6 +82,33 @@ public class ProductDao extends BaseDao{
 		String sql = SqlProduct(YES, NO);
 		List<ProductDto> listProduct = _jdbcTemplate.query(sql, new ProductDtoMapper());
 				return listProduct;
+	}
+	public List<ProductDto> GetAllProductById(int id) {
+		String sql = SqlProductById(id).toString();
+		List<ProductDto> listProduct = _jdbcTemplate.query(sql, new ProductDtoMapper());
+				return listProduct;
+	}
+	public List<ProductDto> GetDataProductPaginate(int id, int start, int totalPage) {
+		StringBuffer sqlGetDataById = SqlProductById(id);
+		List<ProductDto> listProductById = _jdbcTemplate.query(sqlGetDataById.toString(), new ProductDtoMapper());
+		List<ProductDto> listProduct = new ArrayList<>();
+		if (listProductById.size() > 0) {
+			String sql = SqlProductPaginate(id, start, totalPage);
+			listProduct = _jdbcTemplate.query(sql, new ProductDtoMapper());
+		}
+		return listProduct;
+	}
+	private String SqlOneProductById(long id) {
+		StringBuffer  sql = SqlString();
+		sql.append("WHERE 1 = 1 ");
+		sql.append("AND p.id = "+id+" ");
+		sql.append("LIMIT 1 ");
+		return sql.toString();
+	}
+	public List<ProductDto> GetProductById(long id) {
+		String sql = SqlOneProductById(id);
+		List<ProductDto> listProduct = _jdbcTemplate.query(sql, new ProductDtoMapper());
+		return listProduct;
 	}
 }
 
