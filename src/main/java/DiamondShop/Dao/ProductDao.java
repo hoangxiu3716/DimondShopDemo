@@ -110,5 +110,10 @@ public class ProductDao extends BaseDao{
 		List<ProductDto> listProduct = _jdbcTemplate.query(sql, new ProductDtoMapper());
 		return listProduct;
 	}
+	public ProductDto FindProductById(long id) {
+		String sql = SqlOneProductById(id);
+		ProductDto product = _jdbcTemplate.queryForObject(sql, new ProductDtoMapper());
+		return product;
+	}
 }
 
