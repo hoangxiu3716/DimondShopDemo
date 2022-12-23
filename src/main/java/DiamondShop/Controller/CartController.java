@@ -2,6 +2,7 @@ package DiamondShop.Controller;
 
 import java.util.HashMap;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +20,16 @@ public class CartController extends BaseController{
 	private CartServiceImpl cartService = new CartServiceImpl();
 	
 	@RequestMapping(value = "AddCart/{id}")
-	public String AddCart(HttpSession session, @PathVariable long id) {
+	public String AddCart(HttpServletRequest request, HttpSession session, @PathVariable long id) {
 		HashMap<Long, CartDto> cart = (HashMap<Long, CartDto>)session.getAttribute("Cart");
 		if (cart == null) {
 			cart = new HashMap<Long, CartDto>();
 		}
 		cart = cartService.AddCart(id, cart);
 		session.setAttribute("Cart", cart);
-		return "redirect:/chi-tiet-san-pham/" +id;
+		session.setAttribute("TotalQuantyCart", cartService.TotalQuanty(cart));
+		session.setAttribute("TotalPriceCart", cartService.TotalPrice(cart));
+		return "redirect:"+request.getHeader("Referer");
+//		return "redirect:/chi-tiet-san-pham/" +id;
 	}
 }
