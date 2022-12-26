@@ -36,9 +36,9 @@ Body Section
 						<li><a href='<c:url value="/san-pham/${ item.id }"/>'><span
 								class="icon-circle-blank"></span> ${ item.name }</a></li>
 					</c:forEach>
-					<li><a class="totalInCart" href="cart.html"><strong>Đã
+					<li><a class="totalInCart" href="<c:url value="/gio-hang"/>"><strong>Đã
 								mua <span class="badge badge-warning pull-right"
-								style="line-height: 18px;">$448.42</span>
+								style="line-height: 18px;"><fmt:formatNumber type="number" groupingUsed="true" value="${ TotalPriceCart } "/>&nbsp;₫</span>
 						</strong></a></li>
 				</ul>
 			</div>

@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
 	prefix="decorator"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+<%@include file="/WEB-INF/views/layouts/user/taglib.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,9 +39,9 @@
 					</a> <a href="#"><span class="icon-user"></span> My Account</a> <a
 						href="register.html"><span class="icon-edit"></span> Free
 						Register </a> <a href="contact.html"><span class="icon-envelope"></span>
-						Contact us</a> <a href="cart.html"><span
-						class="icon-shopping-cart"></span> ${ TotalQuantyCart } Item(s) - <span
-						class="badge badge-warning"><${ TotalPriceCart }₫</span></a>
+						Contact us</a> <a href="<c:url value="/gio-hang"/>"><span
+						class="icon-shopping-cart"></span> ${ TotalQuantyCart } Sản phẩm - <span
+						class="badge badge-warning"><fmt:formatNumber type="number" groupingUsed="true" value="${ TotalPriceCart } "/>&nbsp;₫
 				</div>
 			</div>
 		</div>
@@ -79,5 +79,6 @@ Lower Header Section
 	<script src="<c:url value="/assets/user/js/jquery.easing-1.3.min.js"/>"></script>
 	<script src="<c:url value="/assets/user/js/jquery.scrollTo-1.4.3.1-min.js"/>"></script>
 	<script src="<c:url value="/assets/user/js/shop.js"/>"></script>
+	<decorator:getProperty property="page.script"></decorator:getProperty>
 </body>
 </html>
