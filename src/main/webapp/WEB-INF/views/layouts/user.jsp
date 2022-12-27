@@ -39,11 +39,22 @@
 					</div>
 					<a class="active" href="index.html"> <span class="icon-home"></span>
 						Home
-					</a> <a href="#"><span class="icon-user"></span> My Account</a> <a
-						href="<c:url value="/dang-ky"/>"><span class="icon-edit"></span>Đăng ký</a> <a href="contact.html"><span class="icon-envelope"></span>
-						Contact us</a> <a href="<c:url value="/gio-hang"/>"><span
-						class="icon-shopping-cart"></span> ${ TotalQuantyCart } Sản phẩm - <span
-						class="badge badge-warning"><fmt:formatNumber type="number" groupingUsed="true" value="${ TotalPriceCart }"/> ₫</span></a>
+					</a>
+					<c:if test="${ not empty LoginInfo }">
+						<a href="#"><span class="icon-user"></span>${ LoginInfo.displayName }</a>
+						<a href="<c:url value="/dang-xuat"/>"><span class="icon-edit"></span>
+							Đăng xuất</a>
+					</c:if>
+					<c:if test="${ empty LoginInfo }">
+						<a href="<c:url value="/dang-ky"/>"><span class="icon-edit"></span>Đăng
+							ký</a>
+					</c:if>
+					<a href="contact.html"><span class="icon-envelope"></span>
+						Liên Hệ</a> <a href="<c:url value="/gio-hang"/>"><span
+						class="icon-shopping-cart"></span> ${ TotalQuantyCart } Sản phẩm -
+						<span class="badge badge-warning"><fmt:formatNumber
+								type="number" groupingUsed="true" value="${ TotalPriceCart }" />
+							₫</span></a>
 				</div>
 			</div>
 		</div>
@@ -73,8 +84,7 @@ Lower Header Section
 					href="#"><img src="<c:url value="/assets/user/img/visa.png"/>" alt="payment"></a> <a
 					href="#"><img src="<c:url value="/assets/user/img/disc.png"/>" alt="payment"></a>
 			</p>
-			<span>Copyright &copy; 2013<br> bootstrap ecommerce
-				shopping template
+			<span>Copyright &copy; 2022<br> HoangHG
 			</span>
 		</div>
 	</div>

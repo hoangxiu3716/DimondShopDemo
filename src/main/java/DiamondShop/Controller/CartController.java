@@ -7,11 +7,14 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import DiamondShop.Dto.CartDto;
+import DiamondShop.Entity.Bill;
 import DiamondShop.Service.CartServiceImpl;
 
 @Controller
@@ -67,5 +70,16 @@ public class CartController extends BaseController{
 		session.setAttribute("TotalQuantyCart", cartService.TotalQuanty(cart));
 		session.setAttribute("TotalPriceCart", cartService.TotalPrice(cart));
 		return "redirect:"+request.getHeader("Referer");
+	}
+	@RequestMapping(value = "checkout", method = RequestMethod.GET)
+	public ModelAndView CheckOut(HttpServletRequest request, HttpSession session) {
+		_mvShare.setViewName("user/bill/checkout");
+		_mvShare.addObject("bill", new Bill());
+		return _mvShare;
+	}
+	@RequestMapping(value = "checkout", method = RequestMethod.POST)
+	public ModelAndView CheckOutBill(HttpServletRequest request, HttpSession session, @ModelAttribute("bill") Bill bill) {
+		_mvShare.setViewName("user/bill/checkout");
+		return _mvShare;
 	}
 }

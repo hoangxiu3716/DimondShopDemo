@@ -5,23 +5,21 @@
 	<div class="row">
 		<div class="span4">
 			<h1>
-				<a class="logo" href="http://localhost:8080/DemoSpringMvc/"><span>Twitter Bootstrap
-						ecommerce template</span> <img
+				<a class="logo" href="http://localhost:8080/DemoSpringMvc/"><span></span> <img
 					src="<c:url value="/assets/user/img/logo-bootstrap-shoping-cart.png"/>"
 					alt="bootstrap sexy shop"> </a>
 			</h1>
 		</div>
 		<div class="span4">
 			<div class="offerNoteWrapper">
-				<h1 class="dotmark">
-					<i class="icon-cut"></i> Twitter Bootstrap shopping cart HTML
-					template is available @ $14
-				</h1>
+<!-- 				<h1 class="dotmark"> -->
+<!-- 					<i class="icon-cut"></i>  -->
+<!-- 				</h1> -->
 			</div>
 		</div>
 		<div class="span4 alignR">
 			<p>
-				<br> <strong> Support (24/7) : 0800 1234 678 </strong><br>
+				<br> <strong> Liên hệ : 0978154613 </strong><br>
 				<br>
 			</p> 
 			<span class="btn btn-mini">[ ${ TotalQuantyCart } ] <span
@@ -58,6 +56,7 @@ Navigation Bar Section
 					<input type="text" placeholder="Search" class="search-query span2">
 				</form>
 				<ul class="nav pull-right">
+					<c:if test="${ empty LoginInfo }">
 					<li class="dropdown"><a data-toggle="dropdown"
 						class="dropdown-toggle" href="#"><span class="icon-lock"></span>
 							Login <b class="caret"></b></a>
@@ -73,13 +72,16 @@ Navigation Bar Section
 								</div>
 								<div class="control-group">
 									<label class="checkbox"> <input type="checkbox">
-										Remember me
+										Nhớ tài khoản
 									</label>
-									<button type="submit" class="shopBtn btn-block">Sign
-										in</button>
+									<button type="submit" class="shopBtn btn-block">Đăng nhập</button>
 								</div>
 							</form>
 						</div></li>
+						</c:if>
+						<c:if test="${ not empty LoginInfo }">
+						<li><a href="#">${ LoginInfo.displayName }<b class="caret"></b></a></li>
+						</c:if>
 				</ul>
 			</div>
 		</div>

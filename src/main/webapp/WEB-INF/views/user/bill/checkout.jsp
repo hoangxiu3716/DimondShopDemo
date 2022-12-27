@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 	<%@include file="/WEB-INF/views/layouts/user/taglib.jsp"%>
 <head>
-<title>Đăng ký tài khoản</title>
+<title>Thanh toán</title>
 </head>
 <body>
 	<div class="row">
@@ -111,62 +111,43 @@
 			<div class="row">
 				<div class="span4">
 					<div class="well">
-						<h5>Đăng ký tài khoản</h5>
 						<br />
-						<form:form action="dang-ky" method="POST" modelAttribute="user">  
+						<form:form action="checkout" method="POST" modelAttribute="bill" class="form-horizontal">
+							<h3>Thanh toán đơn hàng</h3>
 							<div class="control-group">
-								<label class="control-label" for="inputEmail">E-mail
-									address</label>
+								<label class="control-label">Họ tên<sup>*</sup></label>
 								<div class="controls">
-									<form:input class="span3" type="email" placeholder="Mời nhập email" path="user" />  
+									<form:input type="text" placeholder="Mời nhập họ tên" path="displayName" />
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="inputEmail">Mật khẩu</label>
+								<label class="control-label">Email<sup>*</sup></label>
 								<div class="controls">
-									<form:input class="span3" type="password" placeholder="Mời nhập mật khẩu" path="password" />
+									<form:input type="text" class="span3" placeholder="Mời nhập email" path="user" />
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="inputEmail">Họ và tên</label>
+								<label class="control-label">Liên hệ<sup>*</sup></label>
 								<div class="controls">
-									<form:input class="span3" type="text" placeholder="Mời nhập họ và tên" path="displayName" />
+									<form:input type="text" class="span3" placeholder="Mời nhập số điện thoại" path="phone" />
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="inputEmail">Địa chỉ</label>
+								<label class="control-label">Địa chỉ<sup>*</sup></label>
 								<div class="controls">
-									<form:input class="span3" type="text" placeholder="Mời nhập địa chỉ" path="address" />
-								</div>
-							</div>
-							<div class="controls">
-								<button type="submit" class="btn block">Đăng ký thành viên</button>
-							</div>
-						</form:form>
-					</div>
-				</div>
-				<div class="span1">&nbsp;</div>
-				<div class="span4">
-					<div class="well">
-						<h5>Đăng nhập hệ thống</h5>
-						<h1>${ statusLogin }</h1>
-						<form:form action="dang-nhap" method="POST" modelAttribute="user">
-							<div class="control-group">
-								<label class="control-label" for="inputEmail">Email</label>
-								<div class="controls">
-									<form:input class="span3" type="email" placeholder="Mời nhập email" path="user" />
+									<form:textarea path="address" rows="5" cols="30" />
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label" for="inputPassword">Mật khẩu</label>
+								<label class="control-label">Ghi chú<sup>*</sup></label>
 								<div class="controls">
-									<form:input class="span3" type="password" placeholder="Mời nhập mật khẩu" path="password" />
+									<form:textarea path="note" rows="5" cols="30" />
 								</div>
 							</div>
 							<div class="control-group">
 								<div class="controls">
-									<button type="submit" class="defaultBtn">Đăng nhập</button>
-									<a href="#">Quên mật khẩu?</a>
+									<input type="submit" name="submitAccount" value="Register"
+										class="shopBtn exclusive">
 								</div>
 							</div>
 						</form:form>
