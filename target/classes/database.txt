@@ -1,4 +1,4 @@
-CREATE TABLE sach
+ CREATE TABLE sach
 (
   id              VARCHAR(50) NOT NULL,
   tenSach         VARCHAR(512) NOT NULL, 
@@ -182,3 +182,30 @@ INSERT INTO `menu` (`name`) VALUES
 ('Giỏ hàng'),
 ('Bài viết'),
 ('Liên hệ');
+
+
+CREATE TABLE user
+(
+  id              BIGINT(20) NOT NULL AUTO_INCREMENT,
+  user            VARCHAR(100),
+  password     	  VARCHAR(255),
+  displayName     VARCHAR(100),
+  address     	  TEXT,
+  PRIMARY KEY     (id)
+);
+
+
+INSERT INTO user 
+(
+	user,
+	password,
+	displayName,
+	address
+)
+VALUES
+(
+	[value-2],
+	[value-3],
+	[value-4],
+	[value-5]
+)
