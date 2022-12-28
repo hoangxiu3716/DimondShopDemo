@@ -2,7 +2,8 @@ package DiamondShop.Entity;
 
 public class BillDetail {
 	private long id;
-	private long id_product;
+	private long product_id;
+	private long bill_id;
 	private int quanty;
 	private double total;
 	
@@ -15,12 +16,6 @@ public class BillDetail {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public long getId_product() {
-		return id_product;
-	}
-	public void setId_product(long id_product) {
-		this.id_product = id_product;
-	}
 	public int getQuanty() {
 		return quanty;
 	}
@@ -32,6 +27,18 @@ public class BillDetail {
 	}
 	public void setTotal(double total) {
 		this.total = total;
+	}
+	public long getProduct_id() {
+		return product_id;
+	}
+	public void setProduct_id(long product_id) {
+		this.product_id = product_id;
+	}
+	public long getBill_id() {
+		return bill_id;
+	}
+	public void setBill_id(long bill_id) {
+		this.bill_id = bill_id;
 	}
 	
 }

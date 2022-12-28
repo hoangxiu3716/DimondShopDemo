@@ -109,7 +109,7 @@
 			<hr class="soft" />
 
 			<div class="row">
-				<div class="span4">
+				<div class="">
 					<div class="well">
 						<br />
 						<form:form action="checkout" method="POST" modelAttribute="bill" class="form-horizontal">

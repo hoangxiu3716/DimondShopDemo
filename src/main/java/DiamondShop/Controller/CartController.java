@@ -15,6 +15,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import DiamondShop.Dto.CartDto;
 import DiamondShop.Entity.Bill;
+import DiamondShop.Entity.User;
+import DiamondShop.Service.BillServiceImpl;
 import DiamondShop.Service.CartServiceImpl;
 
 @Controller
@@ -22,6 +24,8 @@ public class CartController extends BaseController{
 	
 	@Autowired
 	private CartServiceImpl cartService = new CartServiceImpl();
+	@Autowired
+	private BillServiceImpl billServiceImpl = new BillServiceImpl();
 	
 	@RequestMapping(value = "gio-hang")
 	public ModelAndView Index() {
@@ -74,11 +78,22 @@ public class CartController extends BaseController{
 	@RequestMapping(value = "checkout", method = RequestMethod.GET)
 	public ModelAndView CheckOut(HttpServletRequest request, HttpSession session) {
 		_mvShare.setViewName("user/bill/checkout");
+		Bill bill = new Bill();
+		User loginInfo = (User)session.getAttribute("LoginInfo");
+		if(loginInfo != null) {
+			bill.setAddress(loginInfo.getAddress());
+			bill.setDisplayName(loginInfo.getDisplayName());
+			bill.setUser(loginInfo.getUser());
+		}
 		_mvShare.addObject("bill", new Bill());
 		return _mvShare;
 	}
 	@RequestMapping(value = "checkout", method = RequestMethod.POST)
 	public ModelAndView CheckOutBill(HttpServletRequest request, HttpSession session, @ModelAttribute("bill") Bill bill) {
+		if(billServiceImpl.AddBill(bill) > 0) {
+			HashMap<Long, CartDto> cart = (HashMap<Long, CartDto>)session.getAttribute("cart");
+			billServiceImpl.AddBillDetail(cart);
+		}
 		_mvShare.setViewName("user/bill/checkout");
 		return _mvShare;
 	}
