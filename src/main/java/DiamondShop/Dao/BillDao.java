@@ -43,6 +43,7 @@ public class BillDao extends BaseDao{
 		varname1.append("VALUES ");
 		varname1.append("( ");
 		varname1.append("    "+billDetail.getProduct_id()+", ");
+		varname1.append("    "+billDetail.getBill_id()+", ");
 		varname1.append("    "+billDetail.getQuanty()+", ");
 		varname1.append("    "+billDetail.getTotal()+" ");
 		varname1.append(")");

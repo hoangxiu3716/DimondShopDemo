@@ -89,7 +89,7 @@ public class CartController extends BaseController{
 		return _mvShare;
 	}
 	@RequestMapping(value = "checkout", method = RequestMethod.POST)
-	public ModelAndView CheckOutBill(HttpServletRequest request, HttpSession session, @ModelAttribute("bills") Bill bill) {
+	public ModelAndView CheckOutBill(HttpServletRequest request, HttpSession session, @ModelAttribute("bill") Bill bill) {
 		if(billServiceImpl.AddBill(bill) > 0) {
 			HashMap<Long, CartDto> cart = (HashMap<Long, CartDto>)session.getAttribute("Cart");
 			billServiceImpl.AddBillDetail(cart);

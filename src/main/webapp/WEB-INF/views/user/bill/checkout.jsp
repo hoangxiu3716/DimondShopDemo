@@ -112,7 +112,7 @@
 				<div class="">
 					<div class="well">
 						<br />
-						<form:form action="checkout" method="POST" modelAttribute="bills" class="form-horizontal">
+						<form:form action="checkout" method="POST" modelAttribute="bill" class="form-horizontal">
 							<h3>Thanh toán đơn hàng</h3>
 							<div class="control-group">
 								<label class="control-label">Họ tên<sup>*</sup></label>
