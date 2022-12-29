@@ -15,7 +15,7 @@
 <!-- Bootstrap styles -->
 <link href="<c:url value="/assets/user/css/bootstrap.css" />" rel="stylesheet" />
 <!-- Customize styles -->
-<link href="<c:url value="/assets/user/style.css" />" rel="stylesheet" />
+<link href="<c:url value="/assets/user/css/custom.css" />" rel="stylesheet" />
 <!-- font awesome styles -->
 <link href="<c:url value="/assets/user/font-awesome/css/font-awesome.css" />" rel="stylesheet">
 

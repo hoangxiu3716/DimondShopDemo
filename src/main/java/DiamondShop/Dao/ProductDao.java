@@ -69,7 +69,8 @@ public class ProductDao extends BaseDao{
 	
 	private String SqlProductPaginate(int id, int start, int totalPage) {
 		StringBuffer  sql = SqlProductById(id);
-		sql.append("LIMIT " + start + ", " +totalPage);
+//		sql.append("LIMIT " + start + ", " +totalPage);
+		sql.append("LIMIT " + totalPage);
 		return sql.toString();
 	}
 	

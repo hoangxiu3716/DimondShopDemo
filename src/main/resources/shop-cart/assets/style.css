@@ -22,7 +22,7 @@ hr.soften {margin: 8px 0;background: #DDD;}
 .homCar{overflow:hidden;}
 .navbar .brand {padding: 0px 20px 0;font-size: 37px;color: black;}
 .spaceBtm{padding-bottom:8px}
-#myCarousel.homCar .item img{width:100%; max-height:400px}
+#myCarousel.homCar .item img{width:100%;}
 #myCarousel .btn {border: 0 none;border-radius: 0 0 0 0;bottom: 49px;font-size: 18px;line-height: 42px;padding: 0 28px;position: absolute;right: 0;text-shadow: 0 0 0 transparent;}	
 #myCarousel{position:relative; margin: 0;}
 .navbar-inner {padding-left: 0;padding-right: 0;}

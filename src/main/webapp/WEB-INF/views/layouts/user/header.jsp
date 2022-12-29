@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="span4">
 			<h1>
-				<a class="logo" href="http://localhost:8080/DemoSpringMvc/"><span></span> <img
+				<a class="logo" href="<c:url value="/trang-chu"/>"><span></span> <img
 					src="<c:url value="/assets/user/img/logo-bootstrap-shoping-cart.png"/>"
 					alt="bootstrap sexy shop"> </a>
 			</h1>

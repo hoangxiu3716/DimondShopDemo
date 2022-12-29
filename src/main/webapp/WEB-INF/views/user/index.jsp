@@ -108,7 +108,7 @@ Body Section
 		</div>
 		<div class="span9">
 			<div class="well np">
-				<div id="myCarousel" class="carousel slide homCar">
+				<div id="myCarousel" class="carousel slide homCar slide-img">
 					<div class="carousel-inner">
 						<c:forEach var="item" items="${ slides }" varStatus="index">
 							<c:if test="${ index.first }">

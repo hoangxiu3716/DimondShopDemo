@@ -239,3 +239,7 @@ CREATE TABLE `billdetail` (
 COLLATE='utf8_general_ci'
 ENGINE=InnoDB
 ;
+INSERT INTO slides(img, caption, content)
+VALUES ("bootstrap-templates.png", "Test slides 2", "content2"),
+       ("bootstrap_free-ecommerce.png", "Test slides 3", "content3"),
+       ("carousel1.png", "Test slides 4", "content4");
