@@ -10,7 +10,7 @@ public class BillDao extends BaseDao{
 		StringBuffer  varname1 = new StringBuffer();
 		varname1.append("INSERT INTO bill ");
 		varname1.append("( ");
-		varname1.append("    `user`, `phone`, `displayName`, `address`, `total`, `quanty`, `note` ");
+		varname1.append("    `user`, `phone`, `displayName`, `address`, `total`, `quanty`, `notee` ");
 		varname1.append(") ");
 		varname1.append("VALUES ");
 		varname1.append("( ");
@@ -20,7 +20,7 @@ public class BillDao extends BaseDao{
 		varname1.append("    '"+bill.getAddress()+"', ");
 		varname1.append("    "+bill.getTotal()+", ");
 		varname1.append("    "+bill.getQuanty()+", ");
-		varname1.append("    '"+bill.getNote()+"' ");
+		varname1.append("    '"+bill.getNotee()+"' ");
 		varname1.append(");");
 		int insert = _jdbcTemplate.update(varname1.toString());
 		return insert;

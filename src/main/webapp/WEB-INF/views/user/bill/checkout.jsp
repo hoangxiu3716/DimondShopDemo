@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@include file="/WEB-INF/views/layouts/user/taglib.jsp"%>
+<%@include file="/WEB-INF/views/layouts/user/taglib.jsp"%>
 <head>
 <title>Thanh toán</title>
 </head>
@@ -112,12 +112,12 @@
 				<div class="">
 					<div class="well">
 						<br />
-						<form:form action="checkout" method="POST" modelAttribute="bill" class="form-horizontal">
+						<form:form action="checkout" method="POST" modelAttribute="bills" class="form-horizontal">
 							<h3>Thanh toán đơn hàng</h3>
 							<div class="control-group">
 								<label class="control-label">Họ tên<sup>*</sup></label>
 								<div class="controls">
-									<form:input type="text" placeholder="Mời nhập họ tên" path="displayName" />
+									<form:input type="text" placeholder="moi nhap ho ten" path="displayName" />
 								</div>
 							</div>
 							<div class="control-group">
@@ -141,7 +141,7 @@
 							<div class="control-group">
 								<label class="control-label">Ghi chú<sup>*</sup></label>
 								<div class="controls">
-									<form:textarea path="note" rows="5" cols="30" />
+									<form:textarea path="notee" rows="5" cols="30" />
 								</div>
 							</div>
 							<div class="control-group">

@@ -16,12 +16,11 @@ public class BillServiceImpl implements IBillService{
 	@Autowired
 	private BillDao billDao;
 	
-	@Override
 	public int AddBill(Bill bill) {
 		return billDao.AddBill(bill);
 	}
 
-	@Override
+	
 	public void AddBillDetail(HashMap<Long, CartDto> carts) {
 		
 		long idBill = billDao.GetIdLastBill();

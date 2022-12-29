@@ -220,7 +220,7 @@ CREATE TABLE bill
   address     	  VARCHAR(255),
   total 		  DOUBLE NOT NULL,
   quanty 		  INT,
-  note			  TEXT,
+  notee			  TEXT,
   PRIMARY KEY     (id)
 );
 

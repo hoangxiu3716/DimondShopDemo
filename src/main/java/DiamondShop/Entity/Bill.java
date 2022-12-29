@@ -8,7 +8,7 @@ public class Bill {
 	private String address;
 	private double total;
 	private int quanty;
-	private String note;
+	private String notee;
 	
 	public Bill() {
 		super();
@@ -55,11 +55,11 @@ public class Bill {
 	public void setQuanty(int quanty) {
 		this.quanty = quanty;
 	}
-	public String getNote() {
-		return note;
+	public String getNotee() {
+		return notee;
 	}
-	public void setNote(String note) {
-		this.note = note;
+	public void setNotee(String notee) {
+		this.notee = notee;
 	}
 	
 }

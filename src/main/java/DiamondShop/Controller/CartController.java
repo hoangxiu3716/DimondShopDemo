@@ -85,13 +85,13 @@ public class CartController extends BaseController{
 			bill.setDisplayName(loginInfo.getDisplayName());
 			bill.setUser(loginInfo.getUser());
 		}
-		_mvShare.addObject("bill", new Bill());
+		_mvShare.addObject("bill", bill);
 		return _mvShare;
 	}
 	@RequestMapping(value = "checkout", method = RequestMethod.POST)
-	public ModelAndView CheckOutBill(HttpServletRequest request, HttpSession session, @ModelAttribute("bill") Bill bill) {
+	public ModelAndView CheckOutBill(HttpServletRequest request, HttpSession session, @ModelAttribute("bills") Bill bill) {
 		if(billServiceImpl.AddBill(bill) > 0) {
-			HashMap<Long, CartDto> cart = (HashMap<Long, CartDto>)session.getAttribute("cart");
+			HashMap<Long, CartDto> cart = (HashMap<Long, CartDto>)session.getAttribute("Cart");
 			billServiceImpl.AddBillDetail(cart);
 		}
 		_mvShare.setViewName("user/bill/checkout");
