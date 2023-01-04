@@ -55,4 +55,4 @@ INSERT INTO `product` (`category_id`, `size`, `name`, `price`, `sale`, `title`, 
 		
 		
 INSERT INTO `colors` (`product_id`, `name`, `code`, `img`) VALUES
-(33, 'Silver', '#8c8c8c', 'product_5.jpg');
+(34, 'Silver', '#8c8c8c', 'product_5.jpg');

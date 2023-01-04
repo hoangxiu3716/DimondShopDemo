@@ -27,7 +27,6 @@
 Body Section 
 -->
 	<title>Trang chủ</title>
-	<%-- <h1>${ categories.size() }</h1> --%>
 	<div class="row">
 		<div id="sidebar" class="span3">
 			<div class="well well-small">
@@ -43,13 +42,13 @@ Body Section
 				</ul>
 			</div>
 
-			<div class="well well-small alert alert-warning cntr">
-				<h2>Giảm giá 50%</h2>
-				<p>
-					cho các sản phẩm Pre Order <br> <br> <a
-						class="defaultBtn" href="#">Tại đây</a>
-				</p>
-			</div>
+<!-- 			<div class="well well-small alert alert-warning cntr"> -->
+<!-- 				<h2>Giảm giá 50%</h2> -->
+<!-- 				<p> -->
+<!-- 					cho các sản phẩm Pre Order <br> <br> <a -->
+<!-- 						class="defaultBtn" href="#">Tại đây</a> -->
+<!-- 				</p> -->
+<!-- 			</div> -->
 			<div class="well well-small">
 				<a href="#"><img
 					src="<c:url value="/assets/user/img/paypal.jpg" />"
@@ -61,14 +60,15 @@ Body Section
 			<ul class="nav nav-list promowrapper">
 				<li>
 					<div class="thumbnail">
-						<a class="zoomTool" href="product_details.html"
+						<a class="zoomTool" href="chi-tiet-san-pham/${ highLightProduct[1].product_id }"
 							title="add to cart"><span class="icon-search"></span>Xem nhanh</a> <img
-							src="<c:url value="/assets/user/img/bootstrap-ecommerce-templates.PNG" />"
+							src="<c:url value="/assets/user/img/${ highLightProduct[1].img }" />"
 							alt="bootstrap ecommerce templates">
 						<div class="caption">
 							<h4>
-								<a class="defaultBtn" href="product_details.html">Xem</a> <span
-									class="pull-right">null</span>
+								<a class="defaultBtn" href="chi-tiet-san-pham/${ highLightProduct[3].product_id }">Xem</a> 
+									<i class="pull-right padding-top-8 font-weight-400"><fmt:formatNumber
+													type="number" groupingUsed="true" value="${ highLightProduct[1].price }" />₫</i>
 							</h4>
 						</div>
 					</div>
@@ -76,14 +76,15 @@ Body Section
 				<li style="border: 0">&nbsp;</li>
 				<li>
 					<div class="thumbnail">
-						<a class="zoomTool" href="product_details.html"
+						<a class="zoomTool" href="chi-tiet-san-pham/${ highLightProduct[2].product_id }"
 							title="add to cart"><span class="icon-search"></span>Xem nhanh</a> <img
-							src="<c:url value="/assets/user/img/shopping-cart-template.PNG" />"
+							src="<c:url value="/assets/user/img/${ highLightProduct[2].img }" />"
 							alt="shopping cart template">
 						<div class="caption">
 							<h4>
-								<a class="defaultBtn" href="product_details.html">Xem</a> <span
-									class="pull-right">null</span>
+								<a class="defaultBtn" href="chi-tiet-san-pham/${ highLightProduct[2].product_id }">Xem</a> <i
+									class="pull-right padding-top-8 font-weight-400"><fmt:formatNumber
+													type="number" groupingUsed="true" value="${ highLightProduct[2].price }" />₫</i>
 							</h4>
 						</div>
 					</div>
@@ -91,14 +92,15 @@ Body Section
 				<li style="border: 0">&nbsp;</li>
 				<li>
 					<div class="thumbnail">
-						<a class="zoomTool" href="product_details.html"
+						<a class="zoomTool" href="chi-tiet-san-pham/${ highLightProduct[3].product_id }"
 							title="add to cart"><span class="icon-search"></span>Xem nhanh</a> <img
-							src="<c:url value="/assets/user/img/bootstrap-template.png" />"
+							src="<c:url value="/assets/user/img/${ highLightProduct[3].img }" />"
 							alt="bootstrap template">
 						<div class="caption">
 							<h4>
-								<a class="defaultBtn" href="product_details.html">Xem</a> <span
-									class="pull-right">null</span>
+								<a class="defaultBtn" href="chi-tiet-san-pham/${ highLightProduct[3].product_id }">Xem</a> <i
+									class="pull-right padding-top-8 font-weight-400"><fmt:formatNumber
+													type="number" groupingUsed="true" value="${ highLightProduct[3].price }" />₫</i>
 							</h4>
 						</div>
 					</div>
@@ -183,9 +185,8 @@ New Products
 									<c:forEach var="item" items="${ newProduct }" varStatus="loop">
 										<li class="span3">
 											<div class="thumbnail">
-												<a class="zoomTool" href="product_details.html"
-													title="add to cart"><span class="icon-search"></span></a>
-												QUICK VIEW<a href="chi-tiet-san-pham/${ item.product_id }"><img
+												<a class="zoomTool" href="chi-tiet-san-pham/${ item.product_id }"
+													title="add to cart"><span class="icon-search"></span></a><a href="chi-tiet-san-pham/${ item.product_id }"><img
 													src="<c:url value="/assets/user/img/${ item.img }"/>" alt=""></a>
 											</div>
 										</li>
@@ -212,8 +213,8 @@ New Products
 	-->
 		<div class="well well-small">
 			<h3>
-				<a class="btn btn-mini pull-right" href="products.html"
-					title="View more">VIew More<span class="icon-plus"></span></a> Sản
+				<a class="btn btn-mini pull-right" href="#"
+					title="View more">Xem thêm<span class="icon-plus"></span></a> Sản
 				phẩm nổi bật
 			</h3>
 			<hr class="soften" />
@@ -223,15 +224,15 @@ New Products
 						<c:forEach var="item" items="${ highLightProduct }" varStatus="loop">
 							<li class="span4">
 								<div class="thumbnail">
-									<a class="zoomTool" href="product_details.html"
+									<a class="zoomTool" href="chi-tiet-san-pham/${ item.product_id }"
 										title="add to cart"><span class="icon-search"></span>
-										QUICK VIEW</a> <a href="chi-tiet-san-pham/${ item.product_id }"><img
+										Xem</a> <a href="chi-tiet-san-pham/${ item.product_id }"><img
 										src="<c:url value="/assets/user/img/${ item.img }" />" alt=""></a>
 									<div class="caption">
 										<h5>${ item.name }</h5>
 										<h4>
 											<a class="defaultBtn" href="product_details.html"
-												title="Click to view"><span class="icon-zoom-in"></span></a>
+												title="Nhấn để xem"><span class="icon-zoom-in"></span></a>
 											<a class="shopBtn" href="<c:url value="/AddCart/${ item.product_id }" />" title="add to cart"><span
 												class="icon-plus"></span></a> <span class="pull-right"><fmt:formatNumber
 													type="number" groupingUsed="true" value="${ item.price }" />₫

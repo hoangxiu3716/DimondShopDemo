@@ -243,3 +243,173 @@ INSERT INTO slides(img, caption, content)
 VALUES ("bootstrap-templates.png", "Test slides 2", "content2"),
        ("bootstrap_free-ecommerce.png", "Test slides 3", "content3"),
        ("carousel1.png", "Test slides 4", "content4");
+       
+       
+       
+       
+       <body>
+	<div class="detail-about">
+		<p><strong>Tissot </strong>là một trong số những thương hiệu đồng hồ sang trọng đến từ Thuỵ Sỹ. Thương hiệu được thành lập 
+		tại thị trấn Le Locle, Thuỵ Sỹ bởi nghệ nhân chế tác đồng hồ Charles-Felicien và con trai Charles-Emile Tissot vào năm 1853</p>
+		<p>Thương hiệu Tissot hoàn toàn không hề liên quan đến một thương hiệu sản xuất đồng hồ Thuỵ Sỹ khác là Mathey-Tissot. Thương 
+			hiệu Tissot hiên nay là một trong những thương hiệu con của tập đoàn đồng hồ lớn nhất thế giới - Swatch Group.
+		</p>
+		<p><strong>Lịch sử thành lập thương hiệu Tissot</strong></p>
+		<p>Tissot giới thiệu những chiếc đồng hồ bỏ túi sản xuất hàng loạt đầu tiên và cũng là những chiếc đồng hồ bỏ túi hiển thị 
+			hai múi giờ vào năm 1853 và tiếp tục giới thiệu những chiếc đồng hồ chống từ trường đầu tiên vào năm 1929-1930. Charles-Emile 
+			Tissot đã đến nước Nga vào năm 1858 và thành công lớn trong việc bán những chiếc đồng hồ bỏ túi do mình sản xuất khắp Đế 
+			Quốc Nga. Tisot cũng là thương hiệu đầu tiên sản xuất những chiếc đồng hồ bằng nhựa plastic(IDEA 2001 vào năm 1971), đồng 
+			hồ đá sử dụng chất liệu granite được lấy từ dãy núi đá Alpine (phiên bản Alpine Granite RockWatch vào năm 1985), đồng hồ 
+			với mặt số Ngọc Trai (phiên bản Peart vào năm 1987), đồng hồ gỗ sử dụng bộ vỏ làm từ gỗ (phiên bản Wood vào năm 1988)
+		</p>
+	</div>
+
+
+
+	<div class="detail-about">
+		<p><strong>Rolex </strong>với tên gọi chính xác là Rolex SA là một hãng sản xuất dồng hồ Thuỵ Sỹ với phân khúc
+			từ cao cấp
+			đến xa xỉ và sang trọng. Rolex SA bao gồm hai thương hiệu là Rolex và Montres Tudor SA chuyên thiết kế, sản
+			xuất, phân
+			phối đồng hồ đeo tay dưới thương hiệu Rolex và Tudor. Hãng sản xuất Rolex được thành lập bởi Hans Wilsdorf
+			và Alfred
+			Davis tại London nước Anh vào năm 1905, sau đó đến năm 1919, Rolex đã chuyển toàn bộ hoạt động, cũng như cơ
+			sở sản xuất,
+			đồng hồ sang Geneva Thuỵ Sỹ.</p>
+		<p>Năm 2016, Rolex được tạp chí Forbes xếp hạng thứ 64 trong số tất cả những thương hiệu phát triển và sức ảnh
+			hưởng nhất trên thế giới. Hãng Rolex được xem là thương hiệu cao cấp xa xỉ duy nhất trên thế giới. Hãng
+			Rolex
+			được xem là thương hiệu cao cấp xa xỉ duy nhất trên thế giới sản xuất khoảng 2000 chiếc đồng hồ mỗi ngày
+			thuộc
+			nhiều phân khúc khác nhau.
+		</p>
+		<p>Hãng sản xuất Rolex hiện nay vẫn thuộc sở hữu của gia đình các nhà sáng lập nên thương hiệu, và hiện tại được
+			điều
+			hành bởi CEO Jean-Frederic Dufour.
+		</p>
+		<p><strong>Lịch sử </strong></p>
+		<p>Alfred Davis và anh rể là Hans Wilsdorf đã sáng lập nên "Wilsdorf and Davis" tại London nước Anh vào năm
+			1905,
+			là một công ty tiền thân mà sau này trở thành Rolex SA. Thời điểm ban đầu "Wilsdorf and Davis" hoạt động
+			trong lĩnh
+			vực lắp ráp đồng hồ bằng cách nhập khẩu những bộ máy đồng hồ Thuỵ Sỹ từ nhà sản xuất Herman Aegler đến Anh
+			Quốc và
+			kết hợp với những bộ vỏ đồng hồ chất lượng cao được sản xuất bởi Dennision và các nhà sản xuất khác. Những
+			chiếc dồng hồ
+			đầu tiên của "Wilsdorf and Davis" thường xuyển được gắn nhãn mác "W & D" ở mặt sau đồng hồ.
+		</p>
+		<p>Sau một thời gian hoạt động thành công, đến năm 1908, Wilsdorf đã đăng ký thương hiệu "Rolex" và mở một văn
+			phòng
+			tại La Chaux-de-Fonds, Thuỵ Sỹ. Đến 15 tháng 11 năm 1915, Rolex chính thức trở thành tên công ty, và được sử
+			dụng như một
+			thương hiệu đồng hồ cho đến tận sau này.
+		</p>
+		<p>Đến năm 1914, Kew Obervatory đã trao cho đồng hồ Rolex một chứng chỉ về độ chính xác loại A, thường được sử
+			dụng
+			để cấp riêng cho các loại đồng hồ hải quân có độ chính xác Marine Chronometer.
+		</p>
+		<p>Năm 1919, do chiến tranh thế giới thứ nhất và các loại thuế nhập khẩu và xuất khẩu quá cao đánh vào các sản
+			phẩm cao
+			cấp xa xỉ sang trọng cũng như các sản phẩm được làm từ vàng và bạc, Wilsdorf đã rời nước Anh và chuyển toàn
+			bộ công ty
+			cũng như các cơ sở sản xuất tớ Geneva Thuỵ Sỹ, nơi Rolex được thành lập trở thành công ty đồng hồ Rolex.
+			Thời điểm
+			này tên công ty được đổi thành Montres Rolex SA và cuối cùng là Rolex SA.
+		</p>
+		<p>Đến tháng 12 năm 2008, sau sự ra đi đột ngột của giám đốc điều hành Patrick Heiniger, công ty Rolex đã rơi
+			vào khủng
+			hoảng với việc hao hụt 1 tỷ franc Thuỵ Sỹ (xấp xỉ 574 triệu Bảng Anh, hay 900 triệu USD) vốn đầu tư với
+			Bernard Mađoff, người
+			quản lý quỹ đầu tư người Mỹ đã bị kết tội hoạt động gian lận khoảng 30 tỷ Bảng Anh trên toàn thế giới.</p>
+		<p>Đến năm 2017, thương hiệu Rolex được đánh giá là một biểu tượng của phong cách, của đẳng cấp và là một phụ
+			kiện thể hiện sự sang trọng và xa xỉ, theo báo cáo thương hiệu năm 2017, thương hiệu Rolex được ước tính có
+			giá trị khoảng 8.034 tỷ $.
+		</p>
+		<p><strong>Thành tựu nổi bật</strong></p>
+		<p>Trong suốt quá trình hoạt động và phát triển, Rolex được xem là một biểu tượng của sự sáng tạo và đổi mới,
+			với hàng loạt thành tựu đáng nể trong thế giới đồng hồ như:
+		</p>
+		<p>- Chiếc đồng hồ đeo tay chống nước đầu tiên "Oyster", 1926</p>
+		<p>- Chiếc đồng hồ đeo tay với lịch thứ tự dộng thay đổi đầu tiên trên mặt số (phiên bản Rolex Datejust
+			ref.4467,
+			1945)
+		</p>
+		<p>- Chiếc đồng hồ ddeo tay với bộ vỏ chống nước ở độ sau 100 m (330 ft) (phiên bản Rolex Oyster Perpetal
+			Submariner ref.6204, 1953)</p>
+		<p>- Chiếc đồng hồ đeo tay đầu tiên hiển thị múi giờ thứ hai trên mặt số (phiên bản Rolex GMT Master ref.6542,
+			1954)</p>
+		<p>- Chiếc đồng hồ đeo tay đầu tiên tự động thay đổi lịch ngày và lịch thứ trên mặt số (phiên bản Rolex
+			Day-Date, 1956)</p>
+		<p>- Thợ chế tác đồng hồ đầu tiên đạt được độ chính xác Chronometer cho đồng hồ đeo tay (1910)</p>
+		<p><strong>Các thương hiệu</strong></p>
+		<p>Rolex SA bao gồm hai thương hiệu là Rolex và Tudor.</p>
+		<p>Thương hiệu Tudor (Montres Tudor SA) đã thiết kế, sản xuất và bán đồng hồ Tudor kết từ ngày 6 tháng 3 năm
+			1946.
+			Nhà sáng lập Rolex Hans Wilsdorf thành lập công ty Tudor Watch Company để sản xuất những mẫu đồng hồ với mức
+			giá tầm trung với sự cho phép
+			của hãng Rolex. Số lượng những mẫu đồng hồ Rolex được giới hạn bởi số lương những bộ máy được sản xuất chính
+			hãng, do đó
+			những mẫu đồng hồ Tudor ban đầu được trang bị với các bộ máy từ các nhà sản xuất bộ máy bên ngoài.
+		</p>
+		<p>Trong lịch sử, đồng hồ Tudor được sản xuất bởi Montres Tudor và sử dụng những bộ máy từ hãng ETA SA. Tuy
+			nhiên, kể từ
+			năm 2015 Tudor đã bắt đầu tự sản xuất những bộ máy chính hãng. Mẫu đầu tiên sử dụng bố máy chính hãng là
+			phiên bản Tudor
+			North Flag. Sau đó các phiên bản tiếp theo là Tudor Pelagos và Tudor Heritage Black Bay cũng đã được trang
+			bị bộ máy In Houser.
+		</p>
+		<p>Đồng hồ Tudor được phân phối trên thị thường và hầu hết các nước trên thế giới bao gồm Mỹ, Úc, Canada, Ấn độ,
+			Mexico, Nam Phi,
+			và các quốc gia Châu Âu bao gồm Anh Quốc, Nam Á, Trung Đông và các quốc gia Nam Mỹ, đặc biệt là Brasil,
+			Argentina và
+			Venezuela.
+		</p>
+		<p><strong>Các phiên bản</strong></p>
+		<p>Rolex với ba dòng danh tiếng nhất hiện nay: Oyster Perpetual, Professional và Cellini (Cellini là dòng đồng
+			hồ Rolex mang phong cách thanh lịch "Dress"). Dây đeo được sử dụng trong dòng Oyster được đặt tên theo tên
+			thánh "Jubilee". Dây đeo đồng hồ thường sử dụng là chất liệu thép không gỉ, vàng vàng, vàng trắng, và vàng
+			hồng.</p>
+		<p><strong>Giá thành đồng hồ Rolex</strong></p>
+		<p>Tại Anh Quốc, giá bán lẻ cho một phiên bản "Pilots" bằng thép không gỉ (chẳng hạn như
+			GMT MASTER II) bắt đầu với mức giá khoảng 5600 bảng Anh, nếu khảm thêm kim cương thì
+			sẽ đắt hơn rất nhiều. Giá trung bình cho đồng hồ Rolex với thiết kế phong cách thanh lịch
+			(Dress) sẽ dao đọng trong khoảng từ 650 USD đến 75000 USD, trong khi đó với cùng thiết kế như vậy
+			thì đồng hồ Tudor sẽ có giá dao động từ 250 USD đến 9000 USD. Phiên bản Rolex đắt nhất từng sản xuất
+			bởi hãng sản xuất là chiếc đồng hồ Rolex GMT ICE model là 116769 TBR với mức giá là 485350 USD.
+		</p>
+		<p><strong>Hàng giả</strong></p>
+		<p>Trở thành một thương hiệu danh tiếng trên thế giới, vì thế không thể tránh khỏi việc bị làm giả,
+			số lượng hàng giả hàng nhái vô cùng lớn, được bán bất hợp pháp trên đường phố và trên mạng, một số
+			chiếc đồng hồ Rolex giả sử dụng những bộ máy rẻ tiền, máy cơ tự động, thậm chí là những bộ máy ETA,
+			tuy nhiên hầu hết những chiếc đồng hồ giả đều có thể bị nhận diện bởi các chuyên gia đồng hồ.
+		</p>
+	</div>
+</body>
+
+
+
+
+CREATE TABLE about
+(
+  id              INT unsigned NOT NULL AUTO_INCREMENT,
+  name            VARCHAR(255),
+  description     TEXT,
+  detail LONGTEXT,
+  PRIMARY KEY     (id)
+);
+
+CREATE TABLE `b` (
+	`id` BIGINT(20) NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(255),
+  `description` TEXT,
+  `detail` LONGTEXT NOT NULL COLLATE 'utf8_general_ci',
+	PRIMARY KEY (`id`) USING BTREE
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
+
+insert into about(name, description, detail) 
+VALUES 
+('Đồng hồ Claude Bernard','Vài điều về lịch sử đồng hồ Claude Bernard','Đang cập nhật'),
+('Đồng hồ Tissot','Vài điều về lịch sử đồng hồ Tissot','Đang cập nhật'),
+('Đồng hồ Citizen','Vài điều về lịch sử đồng hồ Citizen','Đang cập nhật');

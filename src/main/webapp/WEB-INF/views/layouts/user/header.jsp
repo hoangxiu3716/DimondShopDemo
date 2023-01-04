@@ -5,8 +5,8 @@
 	<div class="row">
 		<div class="span4">
 			<h1>
-				<a class="logo" href="<c:url value="/trang-chu"/>"><span></span> <img
-					src="<c:url value="/assets/user/img/logo-bootstrap-shoping-cart.png"/>"
+				<a class="logo" href="<c:url value="/trang-chu"/>"><span></span> <img class="myLogo" 
+				src="<c:url value="/assets/user/img/hoangHG.png"/>"
 					alt="bootstrap sexy shop"> </a>
 			</h1>
 		</div>
@@ -32,7 +32,7 @@
 
 <!--
 Navigation Bar Section 
--->
+--><h1>${ menu[3].url }</h1>
 <div class="navbar">
 	<div class="navbar-inner">
 		<div class="container">
@@ -49,12 +49,12 @@ Navigation Bar Section
 						<c:if test="${ not index.first }">
 						<li class="">
 						</c:if>
-						<a href="list-view.html">${ item.name }</a></li>
+						<a href="<c:url value="${ item.url }"/>">${ item.name }</a></li>
 					</c:forEach>
 				</ul>
-				<form action="#" class="navbar-search pull-left">
-					<input type="text" placeholder="Search" class="search-query span2">
-				</form>
+<!-- 				<form action="#" class="navbar-search pull-left"> -->
+<!-- 					<input type="text" placeholder="Search" class="search-query span2"> -->
+<!-- 				</form> -->
 				<ul class="nav pull-right">
 					<c:if test="${ empty LoginInfo }">
 					<li class="dropdown"><a data-toggle="dropdown"

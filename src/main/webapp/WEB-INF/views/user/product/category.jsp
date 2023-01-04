@@ -46,9 +46,8 @@
 						varStatus="loop">
 						<li class="span4">
 							<div class="thumbnail">
-								<a class="zoomTool" href="product_details.html"
-									title="add to cart"><span class="icon-search"></span> QUICK
-									VIEW</a> <a href='<c:url value="/chi-tiet-san-pham/${ item.product_id }"/>'><img
+								<a class="zoomTool" href="<c:url value="/chi-tiet-san-pham/${ item.product_id }"/>"
+									title="add to cart"><span class="icon-search"></span> Xem</a> <a href='<c:url value="/chi-tiet-san-pham/${ item.product_id }"/>'><img
 									src="<c:url value="/assets/user/img/${ item.img }" />" alt=""></a>
 								<div class="caption cntr">
 									<p>${ item.name }</p>
@@ -57,12 +56,12 @@
 													type="number" groupingUsed="true" value="${ item.price }" />₫</strong>
 									</p>
 									<h4>
-										<a class="shopBtn" href="#" title="add to cart"> Add to cart</a>
+										<a class="shopBtn" href="#" title="add to cart"> Thêm vào giỏ hàng</a>
 									</h4>
-									<div class="actionList">
-										<a class="pull-left" href="#">Add to Wish List</a>
-										<a class="pull-left" href="#">Add tp Compare</a>
-									</div>
+<!-- 									<div class="actionList"> -->
+<!-- 										<a class="pull-left" href="#">Add to Wish List</a> -->
+<!-- 										<a class="pull-left" href="#">Add tp Compare</a> -->
+<!-- 									</div> -->
 									<br class="clr">
 								</div>
 							</div>

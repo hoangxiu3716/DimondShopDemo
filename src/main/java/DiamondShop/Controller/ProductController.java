@@ -18,6 +18,8 @@ public class ProductController extends BaseController{
 		_mvShare.addObject("product", _productService.GetProductById(id));
 		int idCategoryId = _productService.GetProductById(id).getCategory_id();
 		_mvShare.addObject("productByCategoryId", _productService.GetProductByCategoryId(idCategoryId));
+		_mvShare.addObject("categories", _homeService.GetDataCategories());
+		_mvShare.addObject("highLightProduct", _homeService.GetDataHighLightProduct());
 		return _mvShare;
 	}
 }
