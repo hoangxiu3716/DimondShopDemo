@@ -54,7 +54,7 @@ Navigation Bar Section
 				</ul>
 				<form:form action="search" method="POST" class="navbar-search pull-left">
 					<input type="text" placeholder="Search" class="search-query span2" name="search" value="${ param.search }">
-					<input type="submit"/>
+<!-- 					<input type="submit" placeholder="Search"> -->
 				</form:form>
 				<ul class="nav pull-right">
 					<c:if test="${ empty LoginInfo }">

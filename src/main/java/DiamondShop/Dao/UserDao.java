@@ -31,6 +31,7 @@ public class UserDao extends BaseDao{
 	public User GetUserByAcc(User user) {
 		String sql = "SELECT * FROM user WHERE user = '"+user.getUser()+"'";
 		User result = _jdbcTemplate.queryForObject(sql, new MapperUser());
+		System.out.println("abc");
 		return result;
 	}
 }
