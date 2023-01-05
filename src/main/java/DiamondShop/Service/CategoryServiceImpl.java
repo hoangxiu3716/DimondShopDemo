@@ -23,5 +23,14 @@ public class CategoryServiceImpl implements ICategoryService{
 		List<ProductDto> productDtos = productDao.GetDataProductPaginate(id, start, totalPage);
 		return productDtos;
 	}
-	
+	@Override
+	public List<ProductDto> GetAllProductBySearch(String search) {
+		List<ProductDto> dtos = productDao.GetAllProductByString(search);
+		return dtos;
+	}
+	@Override
+	public List<ProductDto> GetDataProductPaginateBySearch(String search, int start, int totalPage) {
+		List<ProductDto> productDtos = productDao.GetDataProductPaginateBySearch(search, start, totalPage);
+		return productDtos;
+	}
 }

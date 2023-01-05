@@ -22,4 +22,5 @@ public class ProductController extends BaseController{
 		_mvShare.addObject("highLightProduct", _homeService.GetDataHighLightProduct());
 		return _mvShare;
 	}
+	
 }

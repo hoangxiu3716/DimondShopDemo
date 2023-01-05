@@ -66,6 +66,12 @@ public class ProductDao extends BaseDao{
 		sql.append("AND category_id = "+id+" ");
 		return sql;
 	}
+	private StringBuffer SqlProductByString(String search) {
+		StringBuffer  sql = SqlString();
+		sql.append("WHERE 1 = 1 ");
+		sql.append("AND p.name like '%"+search+"%' ");
+		return sql;
+	}
 	
 	private String SqlProductPaginate(int id, int start, int totalPage) {
 		StringBuffer  sql = SqlProductById(id);
@@ -115,6 +121,27 @@ public class ProductDao extends BaseDao{
 		String sql = SqlOneProductById(id);
 		ProductDto product = _jdbcTemplate.queryForObject(sql, new ProductDtoMapper());
 		return product;
+	}
+	public List<ProductDto> GetAllProductByString(String search) {
+		String sql = SqlProductByString(search).toString();
+		List<ProductDto> listProduct = _jdbcTemplate.query(sql, new ProductDtoMapper());
+				return listProduct;
+	}
+	public List<ProductDto> GetDataProductPaginateBySearch(String search, int start, int totalPage) {
+		StringBuffer sqlGetDataBySearch = SqlProductByString(search);
+		List<ProductDto> listProductBySearch = _jdbcTemplate.query(sqlGetDataBySearch.toString(), new ProductDtoMapper());
+		List<ProductDto> listProduct = new ArrayList<>();
+		if (listProductBySearch.size() > 0) {
+			String sql = SqlProductPaginateBySearch(search, start, totalPage);
+			listProduct = _jdbcTemplate.query(sql, new ProductDtoMapper());
+		}
+		return listProduct;
+	}
+	private String SqlProductPaginateBySearch(String search, int start, int totalPage) {
+		StringBuffer  sql = SqlProductByString(search);
+		sql.append("LIMIT " + start + ", " +totalPage);
+//		sql.append("LIMIT " + totalPage);
+		return sql.toString();
 	}
 }
 

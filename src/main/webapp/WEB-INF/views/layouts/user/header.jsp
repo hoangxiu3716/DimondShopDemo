@@ -52,9 +52,10 @@ Navigation Bar Section
 						<a href="<c:url value="${ item.url }"/>">${ item.name }</a></li>
 					</c:forEach>
 				</ul>
-<!-- 				<form action="#" class="navbar-search pull-left"> -->
-<!-- 					<input type="text" placeholder="Search" class="search-query span2"> -->
-<!-- 				</form> -->
+				<form:form action="search" method="POST" class="navbar-search pull-left">
+					<input type="text" placeholder="Search" class="search-query span2" name="search" value="${ param.search }">
+					<input type="submit"/>
+				</form:form>
 				<ul class="nav pull-right">
 					<c:if test="${ empty LoginInfo }">
 					<li class="dropdown"><a data-toggle="dropdown"
